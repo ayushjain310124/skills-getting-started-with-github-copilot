@@ -82,8 +82,8 @@ section h3 {
 }
 
 .participants-list {
-  list-style: disc;
-  padding-left: 1.2rem;
+  list-style: none;
+  padding-left: 0;
   margin-top: 8px;
   display: flex;
   flex-direction: column;
@@ -91,6 +91,9 @@ section h3 {
 }
 
 .participants-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: linear-gradient(90deg, rgba(255,255,255,0.9), rgba(245,245,245,0.9));
   padding: 6px 10px;
   border-radius: 20px;
@@ -100,7 +103,27 @@ section h3 {
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.participant-email {
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
+  margin-right: 8px;
+}
+
+.delete-participant {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.delete-participant:hover {
+  background: rgba(198,40,40,0.08);
 }
 
 /* subtle hint when no participants yet */
